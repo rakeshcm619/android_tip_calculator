@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+         <TextView
+             android:id="@+id/tvBillAmount"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginLeft="10dp"
+             android:layout_marginTop="20dp"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/bill_amount"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <EditText
+             android:id="@+id/etBillAmount"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/tvBillAmount"
+             android:layout_alignBottom="@+id/tvBillAmount"
+             android:layout_marginLeft="15dp"
+             android:layout_marginRight="10dp"
+             android:layout_toRightOf="@+id/tvBillAmount"
+             android:ems="10"
+             android:fontFamily="sans-serif-light"
+             android:gravity="right"
+             android:hint="@string/amount_hint"
+             android:inputType="number" >
+
+             <requestFocus />
+         </EditText>
+
+         <TextView
+             android:id="@+id/tvTipPercent"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/tvBillAmount"
+             android:layout_below="@+id/etBillAmount"
+             android:layout_marginTop="20dp"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/tip_percent"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <TextView
+             android:id="@+id/tvPercentSymbol"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/tvTipPercentNumber"
+             android:layout_alignBottom="@+id/tvTipPercentNumber"
+             android:layout_marginLeft="5dp"
+             android:layout_toRightOf="@+id/tvTipPercentNumber"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/percent_symbol"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <TextView
+             android:id="@+id/tvTipAmount"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/tvTipPercent"
+             android:layout_below="@+id/tvTipPercentNumber"
+             android:layout_marginTop="20dp"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/tip_amount"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <TextView
+             android:id="@+id/tvTipAmountNumber"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/tvTipAmount"
+             android:layout_alignBottom="@+id/tvTipAmount"
+             android:layout_alignLeft="@+id/tvTipPercentNumber"
+             android:layout_toLeftOf="@+id/tvPercentSymbol"
+             android:ems="10"
+             android:fontFamily="sans-serif-light"
+             android:gravity="right"
+             android:text="@string/tip_amount_hint"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <TextView
+             android:id="@+id/tvTotalAmountNumber"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/tvTotalAmount"
+             android:layout_alignBottom="@+id/tvTotalAmount"
+             android:layout_marginLeft="30dp"
+             android:layout_toRightOf="@+id/tvTotalAmount"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/total_amount_value"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <TextView
+             android:id="@+id/tvMessage"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentRight="true"
+             android:layout_marginBottom="15dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:fontFamily="sans-serif-light"
+             android:gravity="center"
+             android:paddingBottom="5dp"
+             android:paddingTop="5dp"
+             android:textAppearance="?android:attr/textAppearanceSmall"
+             android:textStyle="italic" />
+
+         <TextView
+             android:id="@+id/tvTotalAmount"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/tvTipAmount"
+             android:layout_below="@+id/tvTipAmount"
+             android:layout_marginTop="20dp"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/total_amount"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <TextView
+             android:id="@+id/tvCalculateTip"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/tvTotalAmount"
+             android:layout_below="@+id/tvTotalAmount"
+             android:layout_marginTop="30dp"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/select_tip"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <SeekBar
+             android:id="@+id/sbTipPercent"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/tvCalculateTip"
+             android:layout_alignRight="@+id/etBillAmount"
+             android:layout_marginLeft="10dp"
+             android:layout_toRightOf="@+id/tvCalculateTip"
+             android:max="@integer/max_seekbar_value" />
+
+         <TextView
+             android:id="@+id/tvTipPercentNumber"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/tvTipPercent"
+             android:layout_alignBottom="@+id/tvTipPercent"
+             android:layout_alignRight="@+id/tvTotalAmountNumber"
+             android:ems="10"
+             android:fontFamily="sans-serif-light"
+             android:gravity="right"
+             android:text="@string/percent_hint"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <TextView
+             android:id="@+id/tvDescription"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/tvCalculateTip"
+             android:layout_below="@+id/tvCalculateTip"
+             android:layout_marginTop="30dp"
+             android:fontFamily="sans-serif-light"
+             android:text="@string/bill_description"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+         <EditText
+             android:id="@+id/etDescriptionText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/tvDescription"
+             android:layout_alignBottom="@+id/tvDescription"
+             android:layout_alignRight="@+id/sbTipPercent"
+             android:layout_toRightOf="@+id/tvTipAmount"
+             android:ems="10"
+             android:hint="" />
+
+         <Button
+             android:id="@+id/btnSave"
+             android:textColor="#ffffff"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/tvDescription"
+             android:layout_below="@+id/etDescriptionText"
+             android:layout_marginTop="30dp"
+             android:layout_marginLeft="20dp"
+             android:background="@drawable/green_button"
+             android:text="@string/save"
+             android:onClick="saveBill" />
+
+         <Button
+             android:id="@+id/btnCancel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/btnSave"
+             android:layout_alignBottom="@+id/btnSave"
+             android:layout_alignRight="@+id/etDescriptionText"
+             android:background="@drawable/grey_button"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:layout_marginRight="20dp"
+             android:text="@string/cancel"
+             android:textColor="#ffffff"
+             android:onClick="cancelBillAction" />
+
+</RelativeLayout>
