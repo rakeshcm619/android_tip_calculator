@@ -1,4 +1,6 @@
-Tip Calculator:
+#Tip Calculator
+
+## Description:
 
 1. Calculates bill and helps you save them.
 
@@ -7,3 +9,7 @@ Tip Calculator:
 3. can delete bills from list
 
 4. Slider to select tip percent upto 2 decimal places.
+
+## Demo:
+
+![demo](screenshots/tip_calculator.gif)
