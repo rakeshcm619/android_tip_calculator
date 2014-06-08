@@ -29,7 +29,7 @@
              android:fontFamily="sans-serif-light"
              android:gravity="right"
              android:hint="@string/amount_hint"
-             android:inputType="number" >
+             android:inputType="numberDecimal" >
 
              <requestFocus />
          </EditText>

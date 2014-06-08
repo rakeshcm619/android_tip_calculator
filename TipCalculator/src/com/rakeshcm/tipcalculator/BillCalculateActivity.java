@@ -97,18 +97,20 @@ public class BillCalculateActivity extends Activity {
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
 				Double billAmount = 0.0;
+				int currentProgress = progress;
 				try {
 					billAmount = Double.parseDouble(etBillAmount.getText().toString());
 					tvMessage.setText("");
 				}
 				catch(NumberFormatException ex) {
 					tvMessage.setText("Invalid Bill Amount");
+					sbTipPercent.setProgress(0);
 					tvTipPercentNumber.setText("0.0");
 					tvTipAmountNumber.setText("0.00");
-					sbTipPercent.setProgress(0);
+					currentProgress = 0;
 				}
 				
-				Double tipPercent =  ((double)progress/(double)100);
+				Double tipPercent =  ((double)currentProgress/(double)100);
 				tvTipPercentNumber.setText(tipPercent.toString());
 				
 				Double tipAmount = billAmount * (tipPercent/100);
