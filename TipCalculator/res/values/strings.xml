@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Tip Calculator</string>
+    <string name="app_name">Bills and Tips</string>
     <string name="hello_world">Hello world!</string>
     <string name="select_tip">Tip: </string>
     <string name="bill_amount">Bill Amount: </string>
     <string name="amount_hint">Enter bill amount</string>
-    <string name="percent_hint">0.0</string>
+    <string name="percent_hint">0.00</string>
     <string name="percent_symbol">%</string>
     <string name="tip_percent">Tip Percent : </string>
     <string name="tip_amount_hint">0.00</string>
@@ -21,6 +21,6 @@
     <string name="add_plus">+</string>
     <string name="add_bill_text">Calculate tip, add new bill</string>
     
-    <string name="title_activity_bill_calculate">BillCalculateActivity</string>
+    <string name="title_activity_bill_calculate">Tip Calculator</string>
 
 </resources>
